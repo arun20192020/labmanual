@@ -39,7 +39,7 @@ for i in range(len(target)):
     #pro6
     
     
-    import csv 
+import csv 
 import random
 import math
 def loadCsv(filename):
