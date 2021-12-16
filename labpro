@@ -162,7 +162,7 @@ plt.show()
 
 
 
-
+#pro8
 
 
 
@@ -197,7 +197,7 @@ for i, l in enumerate(kmeans_model.labels_):
 plt.show()
 
 
-#pro8
+
 
 
 
