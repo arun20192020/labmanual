@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int n=5;
+int stack[5];
+int top=-1;
+
+
+void push(int num){
+    if (top==n-1){
+        printf("Stack Overflow\n");
+        
+    }
+    else{
+        stack[++top]=num;
+        printf("Contents of stack are : ");
+        for (int i=0;i<=top;i++){
+            printf("%d ",stack[i]);
+        }
+    }
+    printf("\n");
+}
+
+void pop(){
+    if (top==-1){
+        printf("stack Underflow\n");
+        
+    }
+    else{
+        top=top-1;
+    }
+    printf("Contents of stack are : ");
+    for (int i=0;i<=top;i++){
+        printf("%d " ,stack[i]);
+    }
+    printf("\n");
+}
+
+void isempty(){
+    if (top==-1){
+        printf("Stack is Empty\n");
+    }
+    else{
+        printf("Stack is not Empty!\n");
+    }
+}
+void isfull(){
+    if (top==n-1){
+        printf("Stack is Full\n");
+    }
+    else{
+        printf("Stack is not Full!\n");
+    }
+}
+
+int main()
+{
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+    pop();
+    isfull();
+    isempty();
+    
+    return 0;
+    
+ }
