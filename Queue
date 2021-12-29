@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int n=5;
+int q[5];
+int front=0;
+int  rear=0;
+
+// struct  Node{
+//     int data;
+//     struct Node* next;
+// };
+
+void push(int num){
+    
+    if (rear==n){
+        printf("Queue is already full\n");
+    }
+    else{
+        q[rear]=num;
+        rear++;
+        printf("Contents of Queue : ");
+        for (int i=0;i<rear;i++){
+            printf("%d ",q[i]);
+        }
+        printf("\n");
+    }
+}
+
+void pop(){
+    if (rear==front){
+        printf("Queue is empty cannot pop\n");
+    }
+    else{
+        for (int i=0;i<rear;i++){
+            q[i]=q[i+1];
+        }
+        rear--;
+        
+    }
+    printf("Contents of Queue : ");
+    for (int i=0;i<rear;i++){
+        printf("%d ",q[i]);
+    }
+    printf("\n");
+}
+
+void isempty(){
+    if (rear==front){
+        printf("Queue is empty!\n");
+        
+    }
+    else{
+        printf("Queue is not empty! \n");
+    }
+}
+
+void isfull(){
+    if (rear==n){
+        printf("Queue is full\n");
+    }
+    else{
+        printf("Queue is not empty\n");
+    }
+}
+    
+    
+
+
+int main()
+{
+    isempty();
+    push(10);
+    push(20);
+    push(30);
+    push(40);
+    push(50);
+    isfull();
+    pop();
+    pop();
+    pop();
+    pop();
+    pop();
+    pop();
+    
+    return 0;
+    }
